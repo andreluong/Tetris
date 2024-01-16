@@ -3,12 +3,6 @@
 #include "infoDisplay.h"
 #include "timer.h"
 
-// std::vector<InfoDisplay> createInfoDisplays(Font font, Game game) {
-    
-
-//     return {nextBlockDisplay, scoreDisplay, highScoreDisplay};
-// }
-
 void drawGame(Font font, Game& game, Texture2D background, std::vector<InfoDisplay> displays, std::vector<Button> buttons) {
     BeginDrawing();
     
@@ -45,15 +39,16 @@ void initGame() {
     Game game = Game();
     Button pauseBtn = Button({420, BTN_Y, BTN_SIZE, BTN_SIZE}, pauseOff, pauseOn);
     Button musicBtn = Button({460, BTN_Y, BTN_SIZE, BTN_SIZE}, audioOff, audioOn);
-    // std::vector<InfoDisplay> infoDisplays = createInfoDisplays(font, game);
+
     Rectangle nextBlockRect = {RIGHT_CONTAINER_START, 55, RECT_WIDTH, RECT_HEIGHT * 3}; 
     InfoDisplay nextBlockDisplay = InfoDisplay(font, "Next", {370, 15}, nextBlockRect);
 
     Rectangle scoreRect = {RIGHT_CONTAINER_START, 285, RECT_WIDTH, RECT_HEIGHT};
     InfoDisplay scoreDisplay = InfoDisplay(font, "Score", {360, 245}, scoreRect, &game.score);
-
+    
     Rectangle highScoreRect = {RIGHT_CONTAINER_START, 395, RECT_WIDTH, RECT_HEIGHT};
     InfoDisplay highScoreDisplay = InfoDisplay(font, "Best", {370, 355}, highScoreRect, &game.highScore);
+
     Vector2 mousePoint = {0.0f, 0.0f};
     Timer timer = Timer();
 
