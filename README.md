@@ -1,7 +1,9 @@
 # Tetris
-A simple Tetris clone developed using [Raylib](https://www.raylib.com/).
+A simple infinte Tetris clone developed using [Raylib](https://www.raylib.com/).
 
-### Controls
+![product](assets/image/product.png)
+
+## Controls
 | Keybind  | Function |
 | --- | --- |
 | &#8592; | Move block to the left |
@@ -16,6 +18,8 @@ A simple Tetris clone developed using [Raylib](https://www.raylib.com/).
 | --- | --- |
 | ![Mute Music Off](assets/image/muteMusicOff.png) ![Mute Music On](assets/image/muteMusicOn.png) | Stop/resume the music |
 | ![Pause Off](assets/image/pauseOff.png) ![Pause On](assets/image/pauseOn.png) | Pause/unpause the game
+
+When the game is over, press any key (apart from 'p', 'm', 'r') to restart.
 
 ## Setup
 1. Clone the repo:
